@@ -1,4 +1,0 @@
-----
-title: "M"
-permalink: /m/
-----
