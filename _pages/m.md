@@ -1,5 +1,5 @@
 ----
-title: "About"
-permalink: /about/
+title: "M"
+permalink: /m/
 ----
 I'm a junior NLP researcher.
