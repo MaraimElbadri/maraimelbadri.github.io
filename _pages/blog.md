@@ -4,12 +4,13 @@ permalink: /blog/
 title: "Blog Posts"
 author_profile: true
 ---
+{% include base_path %}
+{% include group-by-array collection=site.posts field="tags" %}
 
-
-	<h1>{{ page.title }}</h1>
-	<ul class="posts">
-
-	  {% for post in site.posts %}
-	    <li><span>{{ post.date | date_to_string }}</span> » <a href="{{ post.url }}" title="{{ post.title }}">{{ post.title }}</a></li>
-	  {% endfor %}
-	</ul>
+{% for tag in group_names %}
+  {% assign posts = group_items[forloop.index0] %}
+  <h2 id="{{ tag | slugify }}" class="archive__subtitle">{{ tag }}</h2>
+  {% for post in posts %}
+    {% include archive-single.html %}
+  {% endfor %}
+{% endfor %}

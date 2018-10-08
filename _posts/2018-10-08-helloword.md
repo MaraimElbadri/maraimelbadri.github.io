@@ -6,6 +6,7 @@ header:
 	images: "/images/first-post/header.jpg"
 excerpt: "Hello world"
 mathjax: "true"
+layout: post
 ---
 
 # H1 Heading
