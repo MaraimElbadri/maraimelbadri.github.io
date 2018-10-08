@@ -1,8 +1,0 @@
-title: "My Awesome Site"
-theme: minimal-mistakes-jekyll
-minimal_mistakes_skin: "contrast"
-author:
-  name     : "Your Name"
-  avatar   : "/assets/images/bio-photo.jpg"
-  bio      : "My awesome biography constrained to a sentence or two goes here."
-  location : "Somewhere, USA" 
