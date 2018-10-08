@@ -3,8 +3,6 @@ layout: single
 permalink: /activities/
 title: "Activities"
 author_profile: true
-tags: [Jekyll, theme, responsive]
-comments: false
 ---
 
 ### Upcoming
