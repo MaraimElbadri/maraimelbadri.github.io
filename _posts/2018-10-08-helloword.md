@@ -7,6 +7,7 @@ header:
 excerpt: "Hello world"
 mathjax: "true"
 layout: post
+permalink: /:year/:month/:title.html
 ---
 
 # H1 Heading
