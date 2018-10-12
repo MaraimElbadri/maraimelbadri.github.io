@@ -1,5 +1,4 @@
 ---
-layout: page
 title: Activities
 tags: [about, Jekyll, theme, responsive]
 permalink: /activities/
