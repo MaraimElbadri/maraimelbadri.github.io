@@ -1,6 +1,5 @@
 ---
 title: Activities
-tags: [about, Jekyll, theme, responsive]
 permalink: /activities/
 comments: false
 ---
