@@ -14,13 +14,14 @@ html {
     font-size: 16px;
   }
 
-  @include breakpoint($large) {
+ /*  @include breakpoint($large) {
     font-size: 16px;
   }
 
   @include breakpoint($x-large) {
     font-size: 18px;
   }
+  /* 
 
   -webkit-text-size-adjust: 100%;
   -ms-text-size-adjust: 100%;
