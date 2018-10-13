@@ -5,19 +5,18 @@
 #main {
   @include container;
   @include clearfix;
-  margin-top: 2em;
+  margin-top: 1em;
   padding-left: 1em;
   padding-right: 1em;
-  animation: intro 0.3s both;
-  animation-delay: 0.35s;
+  -webkit-animation: intro 0.3s both;
+          animation: intro 0.3s both;
+  -webkit-animation-delay: 0.35s;
+          animation-delay: 0.35s;
 
   @include breakpoint($x-large) {
     max-width: $x-large;
   }
 }
-
-
-
 
 .page {
   @include breakpoint($large) {
@@ -25,7 +24,6 @@
     @include prefix(0.5 of 12);
     @include suffix(2 of 12);
   }
-  
 
   .page__inner-wrap {
     @include full();
@@ -53,6 +51,12 @@
 }
 
 .page__content {
+
+  h2 {
+    padding-bottom: 0.5em;
+    border-bottom: 1px solid $border-color;
+  }
+
   p, li, dl {
     font-size: 1em;
   }
@@ -61,7 +65,7 @@
   p {
     margin: 0 0 $indent-var;
 
-    // sibling indentation
+    /* sibling indentation*/
     @if $paragraph-indent == true {
       & + p {
         text-indent: $indent-var;
@@ -109,24 +113,35 @@
   position: relative;
   margin-bottom: 2em;
   @include clearfix;
-  animation: intro 0.3s both;
-  animation-delay: 0.25s;
+  -webkit-animation: intro 0.3s both;
+          animation: intro 0.3s both;
+  -webkit-animation-delay: 0.25s;
+          animation-delay: 0.25s;
 
   &--overlay {
     position: relative;
     margin-bottom: 2em;
     padding: 3em 0;
     @include clearfix;
-    text-align: center;
     background-size: cover;
     background-repeat: no-repeat;
     background-position: center;
-    animation: intro 0.3s both;
-    animation-delay: 0.25s;
+    -webkit-animation: intro 0.3s both;
+            animation: intro 0.3s both;
+    -webkit-animation-delay: 0.25s;
+            animation-delay: 0.25s;
+
+    a {
+      color: #fff;
+    }
 
     .wrapper {
-      padding-left: 2em;
-      padding-right: 2em;
+      padding-left: 1em;
+      padding-right: 1em;
+
+      @include breakpoint($x-large) {
+        max-width: $x-large;
+      }
     }
 
     .page__title,
@@ -135,6 +150,10 @@
     .btn {
       color: #fff;
       text-shadow: 1px 1px 4px rgba(#000, 0.5);
+    }
+
+    .page__lead {
+      max-width: $medium;
     }
 
     .page__title {
@@ -166,7 +185,7 @@
   text-align: right;
   z-index: 5;
   opacity: 0.5;
-  border-radius: $border-radius 0 $border-radius 0;
+  border-radius: $border-radius 0 0 0;
 
   @include breakpoint($large) {
     padding: 5px 10px;
@@ -279,6 +298,85 @@
   font-size: $type-size-6;
   border-top: 1px solid $border-color;
   text-transform: uppercase;
+}
+
+.page__comments-form {
+  padding: 1em;
+  background: $lighter-gray;
+  -webkit-transition: $global-transition;
+  transition: $global-transition;
+
+  &.disabled {
+    input,
+    button,
+    textarea,
+    label {
+      pointer-events: none;
+      cursor: not-allowed;
+      filter: alpha(opacity=65);
+      box-shadow: none;
+      opacity: 0.65;
+    }
+  }
+}
+
+.comment {
+  @include clearfix();
+  margin: 1em 0;
+
+  &:not(:last-child) {
+    border-bottom: 1px solid $border-color;
+  }
+}
+
+.comment__avatar-wrapper {
+  float: left;
+  width: 60px;
+  height: 60px;
+
+  @include breakpoint($large) {
+    width: 100px;
+    height: 100px;
+  }
+}
+
+.comment__avatar {
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+
+  @include breakpoint($large) {
+    width: 80px;
+    height: 80px;
+    padding: 5px;
+    border: 1px solid $border-color;
+  }
+}
+
+.comment__content-wrapper {
+  float: right;
+  width: calc(100% - 60px);
+
+  @include breakpoint($large) {
+    width: calc(100% - 100px);
+  }
+}
+
+.comment__author {
+  margin: 0;
+
+  a {
+    text-decoration: none;
+  }
+}
+
+.comment__date {
+  @extend .page__meta;
+  margin: 0;
+
+  a {
+    text-decoration: none;
+  }
 }
 
 
