@@ -181,7 +181,3 @@ input[type="search"]::-webkit-search-cancel-button {
   -webkit-appearance: none; /* inner-padding issues in Chrome OSX, Safari 5*/
 }
 
-textarea {
-  overflow: auto; /* remove vertical scrollbar in IE6-9*/
-  vertical-align: top; /* readability and alignment cross-browser*/
-}
