@@ -1,7 +1,7 @@
 ---
 layout: posts
-permalink: /machine-learning/
-title: "Machine Learning Posts by Tags"
+permalink: /blog/
+title: "Blog Posts by Tags"
 author_profile: true
 ---
 
